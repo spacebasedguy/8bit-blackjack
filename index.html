@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>8bit BlackJack!</title>
+  </head>
+  <body>
+    <main>
+
+      <section class="player player--active">
+        <h2 class="name">Player</h2>
+        <p class="score" id="score--player">0</p>
+        <div class="table full border">
+        <canvas id="playerCanvas"  width='418' height='275'></canvas>
+          </div>
+      </section>
+
+      <section class="dealer">
+        <h2 class="name">Dealer</h2>
+        <p class="score" id="score--dealer">0</p>
+        <div class="table right full border">
+          <canvas id="dealerCanvas"  width='418' height='275'></canvas>
+        </div>
+      </section>
+
+      <img class="deck" src="img/deck.png" alt="Deck of cards"  />
+
+      <button class="btn btn--new">
+        <span class="emoji">🔄</span>New Game
+      </button>
+      <button class="btn btn--hit"><span class="emoji">👆</span>Hit</button>
+      <button class="btn btn--stand">
+        <span class="emoji">⛔️</span>Stand
+      </button>
+    </main>
+    <div class="overlay"></div>
+    <div class="modal">
+      <button class="btn btn--close-modal">&times;</button>
+      <h2>Welcome to 8-bit</h2>
+      <h1>BlackJack!💰🤑</h1>
+      <p class="line">------------------------------</p>
+      <p>Click "Continue" or press ESC to Begin.</p>
+      <button class="btn btn--continue">Continue</button>
+    </div>
+    <img id="cards" class="hidden" src="img/cards.png" />
+    <script src="script.js"></script>
+
+    <audio id="hitsound">
+      <source src="audio/hit.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="dealsound">
+      <source src="audio/deal.mp3" type="audio/mpeg" />
+      <audio id="turn">
+      <source src="audio/turn.wav" />
+    </audio>
+    <audio id="won">
+      <source src="audio/won.wav"  />
+    </audio>
+    <audio id="gameover">
+      <source src="audio/gameover.wav"  />
+    </audio>
+  </body>
+</html>
+
