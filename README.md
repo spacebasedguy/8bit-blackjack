@@ -1,4 +1,4 @@
-# 8bit-blackjack Game 0.1
+# 8bit-blackjack 0.1
 
 Simplified version of BlackJack Game with 8bit like UI.
 
