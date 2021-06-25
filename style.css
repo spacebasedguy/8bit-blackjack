@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: "Press Start 2P", sans-serif;
   height: 100vh;
   color: #eee;
   background-color: #3a750a;
@@ -24,6 +24,12 @@ body {
 h1 {
   font-size: 3rem;
   margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: -2rem;
+  margin-bottom: 0.5rem;
 }
 
 h2 {
@@ -112,6 +118,21 @@ main {
   padding: 0rem;
 }
 
+.red {
+  margin-top: 1rem;
+  color: rgb(172, 0, 0);
+}
+
+.green {
+  margin-top: 1rem;
+  color: green;
+}
+
+.grey {
+  margin-top: 1rem;
+  color: grey;
+}
+
 .full {
   border-color: rgba(255, 255, 255, 0.4);
 }
@@ -178,6 +199,11 @@ main {
   margin-bottom: 1.5rem;
 }
 
+.line2 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
 /* -------------------------- */
 /* CLASSES TO MAKE MODAL WORK */
 .hidden {
@@ -199,6 +225,21 @@ main {
   z-index: 10;
 }
 
+.modal--narrow {
+  position: absolute;
+  text-align: center;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  color: rgb(24, 24, 24);
+  background-color: white;
+  padding: 6rem 5rem 9rem 5rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -206,7 +247,7 @@ main {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(0.5rem);
+  backdrop-filter: blur(0.2rem);
   z-index: 5;
 }
 
@@ -241,7 +282,23 @@ main {
   filter: grayscale(100%);
 }
 
+.inline {
+  display: inline;
+}
+
+.black {
+  color: black;
+}
+
 #cards {
   width: 2622;
   height: 1070;
+}
+
+#player--score {
+  font-size: 3rem;
+}
+
+#dealer--score {
+  font-size: 3rem;
 }

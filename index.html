@@ -37,30 +37,89 @@
       </button>
     </main>
     <div class="overlay"></div>
+
     <div class="modal">
       <button class="btn btn--close-modal">&times;</button>
       <h2>Welcome to 8-bit</h2>
       <h1>BlackJack!💰🤑</h1>
-      <p class="line">------------------------------</p>
-      <p>Click "Continue" or press ESC to Begin.</p>
+      <p class="line">-------------------------</p>
+      <p><i>This is <strong>simnplified</strong> version of BlackJack. <strong>Ace</strong> has always value of <strong>"1".</strong></i></p>
+      <p class="line">-------------------------</p>
+      <p class="black">Click "Continue" or press ESC to Begin.</p>
       <button class="btn btn--continue">Continue</button>
     </div>
+
+    <div id=player--busted class="modal--narrow hidden">
+      <button onclick='closeModal(playerBustedAlert)' class="btn btn--close-modal">&times;</button>
+      <h1>BUSTED!<span class="emoji">😭</span></h1>
+      <h2>Player Score: <span id=player--busted--score class="red">0</span></h2>
+      <p class="line2">--------------------</p>
+      <p>“Giving up is the only sure way to fail.”</p>
+      <button onclick='closeModal(playerBustedAlert)'  class="btn btn--continue">Play Again?</button>
+    </div>
+
+    <div id=dealer--busted class="modal hidden">
+      <button onclick='closeModal(dealerBustedAlert)' class="btn btn--close-modal">&times;</button>
+      <h1>YOU WON!!!🤩 </h1>
+      <h2>Dealer Score: <span id=dealer--busted--score class="red">0</span></h2>
+      <p class="line2">--------------------</p>
+      <h2>DEALER IS BUSTED!<span class="emoji">😂</span></h2>
+      <p class="line2">--------------------</p>      
+      <button onclick='closeModal(dealerBustedAlert)' class="btn btn--continue">Play Again?</button>
+    </div>
+
+    <div id=draw class="modal--narrow hidden">
+      <button onclick='closeModal(dealerDrawAlert)' class="btn btn--close-modal">&times;</button>
+      <h1>IT'S A DRAW!<span class="emoji">🤷‍♀️</span></h1>
+      <p class="line2">--------------------</p>
+      <h2>Player Score: <span id=draw--player--score class="grey">0</span></h2>
+      <h2>Dealer Score: <span id=draw--dealer--score class="grey">0</span></h2>
+      <p class="line2">--------------------</p>
+      <button onclick='closeModal(dealerDrawAlert)' class="btn btn--continue">Play Again?</button>
+    </div>
+
+    <div id=dealer--won class="modal--narrow hidden">
+      <button onclick='closeModal(dealerWonAlert)' class="btn btn--close-modal">&times;</button>
+      <h1>DEALER WON!<span class="emoji">😭</span></h1>
+      <p class="line2">--------------------</p>
+      <h2>Dealer Score: <span id=dealer--won--dealer--score>0</span></h2>
+      <h2>Player Score: <span id=dealer--won--player--score class="red">0</span></h2>
+      <p class="line2">--------------------</p>      
+      <p>“Giving up is the only sure way to fail.”</p>
+      <button onclick='closeModal(dealerWonAlert)' class="btn btn--continue">Play Again?</button>
+    </div>
+
+    <div id=player--won class="modal hidden">
+      <button onclick='closeModal(playerWonAlert)' class="btn btn--close-modal">&times;</button>
+      <h1>YOU WON!!!🤩</h1>
+      <h3>Congratulations! 🥳🎉</h3>
+      <p class="line2">--------------------</p>
+      <h2>Player Score: <span id=player--won--player--score class="green">0</span></h2>
+      <p class="line2">--------------------</p>
+      <h2>Dealer Score: <span id=player--won--dealer--score class="red">0</span></h2>
+      <p class="line2">--------------------</p>
+      <button onclick='closeModal(playerWonAlert)' class="btn btn--continue">Play Again?</button>
+    </div>
+
     <img id="cards" class="hidden" src="img/cards.png" />
     <script src="script.js"></script>
 
-    <audio id="hitsound">
+    <audio id="hit--sound">
       <source src="audio/hit.mp3" type="audio/mpeg" />
     </audio>
-    <audio id="dealsound">
+    <audio id="deal--sound">
       <source src="audio/deal.mp3" type="audio/mpeg" />
-      <audio id="turn">
+      <audio id="turn--sound">
       <source src="audio/turn.wav" />
     </audio>
-    <audio id="won">
+    <audio id="winning--sound">
       <source src="audio/won.wav"  />
     </audio>
-    <audio id="gameover">
+    <audio id="game--over">
       <source src="audio/gameover.wav"  />
+    </audio>
+    <audio id="draw--sound">
+      <source src="audio/draw.wav"  />
     </audio>
   </body>
 </html>
